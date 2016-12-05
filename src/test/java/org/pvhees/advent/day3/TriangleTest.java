@@ -2,12 +2,15 @@ package org.pvhees.advent.day3;
 
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TriangleTest {
+
+    private static final String INPUT_FILE_DAY3 = "/Users/pierrevanhees/IdeaProjects/advent2016/src/main/resources/day3-input.txt";
 
     @Test
     public void example() {
@@ -16,12 +19,13 @@ public class TriangleTest {
     }
 
     @Test
-    public void opgave1() {
-        System.out.println("Geldige driehoeken: "+ Triangle.howManyValid("/Users/pierrevanhees/IdeaProjects/advent2016/src/main/resources/day3-input.txt"));
+    public void opgave1() throws IOException {
+        System.out.println("Geldige driehoeken: "+ Triangle.howManyValidByLine(INPUT_FILE_DAY3));
     }
 
     @Test
-    public void opgave2() {
-        System.out.println("Geldige driehoeken per kolom: "+ Triangle.howManyValidByColumn("/Users/pierrevanhees/IdeaProjects/advent2016/src/main/resources/day3-input.txt"));
+    public void opgave2() throws IOException {
+        System.out.println("Geldige driehoeken per kolom: "+ Triangle.howManyValidByColumn(INPUT_FILE_DAY3));
     }
+
 }
