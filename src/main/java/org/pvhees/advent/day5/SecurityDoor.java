@@ -42,7 +42,7 @@ public class SecurityDoor {
                     if (password[pswPosIndex] == ' ') {
                         password[pswPosIndex] = hash.charAt(6);
                         passwordCharactersFound++;
-                        System.out.println("Found " + hash.charAt(6) + " at " + pswPosIndex + "(nr " + passwordCharactersFound + ")");
+                        //System.out.println("Found " + hash.charAt(6) + " at " + pswPosIndex + "(nr " + passwordCharactersFound + ")");
                     }
                 }
             }
