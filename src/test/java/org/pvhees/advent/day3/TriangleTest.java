@@ -14,18 +14,17 @@ public class TriangleTest {
 
     @Test
     public void example() {
-        Integer[] triangle = new Integer[] {5, 10 ,25};
-        assertThat(Triangle.isValid(triangle), not(equalTo(true)));
+        assertThat(new Triangle(5, 10,25).isValid(), not(equalTo(true)));
     }
 
     @Test
     public void opgave1() throws IOException {
-        System.out.println("Geldige driehoeken: "+ Triangle.howManyValidByLine(INPUT_FILE_DAY3));
+        System.out.println("Geldige driehoeken per regel: "+ Day3.howManyValidByLine(INPUT_FILE_DAY3));
     }
 
     @Test
     public void opgave2() throws IOException {
-        System.out.println("Geldige driehoeken per kolom: "+ Triangle.howManyValidByColumn(INPUT_FILE_DAY3));
+        System.out.println("Geldige driehoeken per kolom: "+ Day3.howManyValidByColumn(INPUT_FILE_DAY3));
     }
 
 }
