@@ -8,3 +8,4 @@ public interface TriangleParser {
     List<Triangle> parse(List<String> lines);
 
 }
+
