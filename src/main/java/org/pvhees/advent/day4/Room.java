@@ -37,15 +37,18 @@ public class Room {
 
         Collections.sort(letterCountList, new Comparator<LetterCount>(){
             @Override
-            public int compare(LetterCount d1, LetterCount d2){
+            public int compare(LetterCount d1, LetterCount d2) {
+                // first sort on descending count
                 int countCmp = d1.count - d2.count < 0 ? 1 : (d1.count - d2.count > 0 ? -1 : 0);
                 if (countCmp != 0) {
                     return countCmp;
                 }
+                // then sort on ascending letter
                 return d1.letter.compareTo(d2.letter);
             }
         });
 
+        // The letters of the top 5 items (which are the first 5 in the list after the sort) are used for the checksum
         StringBuilder calculatedChecksum = new StringBuilder();
         for (int i=0; i< 5; i++) {
             calculatedChecksum.append(letterCountList.get(i).getLetter());
