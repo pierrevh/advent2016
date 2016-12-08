@@ -13,6 +13,10 @@ public class InputReader {
     private InputReader() {
     }
 
+    public static List<String> filenameToList(String filenaam) throws IOException {
+        return fileToList(Paths.get(filenaam));
+    }
+
     public static Path filenameToPath(String filenaam) {
         return Paths.get(filenaam);
     }
